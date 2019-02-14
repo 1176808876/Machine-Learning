@@ -20,7 +20,7 @@ IF NOT EXIST %LogFolderName%\%LogFileName% (echo timestamp,command>> %LogFolderN
 
 :getcmd
 set Command=
-set DateTime=%date:~0,3%_%date:~3,4%_%date:~8,2%_%date:~11,2% %time:~0,2%:%time:~3,2%:%time:~6,2%
+set DateTime=%date:~3,4%_%date:~8,2%_%date:~11,2% %time:~0,2%:%time:~3,2%:%time:~6,2%
 set /P Command=%cd%^>
 echo %DateTime%  !Command!>> %LogFolderName%\%LogFileName%
 call %Command%
